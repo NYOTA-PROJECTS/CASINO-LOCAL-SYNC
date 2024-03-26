@@ -27,8 +27,8 @@ const db1Config = {
 
 const db2Config = {
     host: "127.0.0.1",
-    user: "root",
-    password: "root",
+    user: "postgres",
+    password: "Admin@Nyota24",
     database: "database_casino_local",
     dialect: 'postgres',
     port: 5432,
@@ -255,3 +255,5 @@ function writeLogMessage(logMessage) {
 
 // Appeler la fonction principale pour comparer et synchroniser les données
 compareAndSyncData();
+// Repéter la comparaison toutes les 3 minutes
+setInterval(compareAndSyncData, 3 * 60 * 1000);
